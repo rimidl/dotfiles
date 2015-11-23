@@ -1,0 +1,28 @@
+default_username='rimidl'
+
+MAGENTA="\[\033[0;31m\]"
+ORANGE="\[\033[0;33m\]"
+GREEN="\[\033[0;32m\]"
+PURPLE="\[\033[0;35m\]"
+WHITE="\[\033[0;37m\]"
+RESET="\[\033[m\]"
+
+if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+function usernamehost() {
+  if [ $USER != $default_username ]; then echo "\u@\h:"; fi
+}
+
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+
+source /usr/local/etc/bash_completion.d/git-completion.bash
+__git_complete g __git_main
+__git_complete gco _git_checkout
+__git_complete gci _git_commit
+
+PS1="${ORANGE}[\${debian_chroot:+($debian_chroot)}\$(usernamehost)\w\$(__git_ps1)]>${RESET} "

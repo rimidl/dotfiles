@@ -1,0 +1,8 @@
+export EDITOR=vim
+
+export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+export SECRET_KEY_BASE=66acbfae4e11b925d4d83d993269db374df7dc69f1274e579a0e4cd603ec4c60bd4f50d0bc450f361b37105eda9288e61a9e8d477813db60de9458cabaacf4a1

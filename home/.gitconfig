@@ -1,0 +1,33 @@
+[user]
+	name = Vladimir Strakhov
+	email = vl.strakhov@evrone.ru
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	br = branch
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	put = push origin HEAD
+	up = pull --rebase --stat
+	r = rebase origin/master
+	ri = rebase -i origin/master
+	ctags = !.git/hooks/ctags
+[core]
+	autocrlf = input
+	excludesfile = /Users/rimidl/.gitignore
+  editor = vim
+
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[push]
+	default = simple
+[init]
+	templatedir = ~/.git_template

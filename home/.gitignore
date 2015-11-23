@@ -1,0 +1,7 @@
+*.swp
+*.*~
+.idea/
+.DS_Store
+.agignore
+_/
+config/projections.json
