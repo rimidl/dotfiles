@@ -171,6 +171,10 @@ set nocompatible
     au FileType org setlocal tabstop=2
     au FileType org setlocal shiftwidth=2
 
+  " == supertab
+    let g:SuperTabDefaultCompletionType = "context"
+    let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+
   " == tagbar
     " let g:tagbar_compact = 1     " Omit help and empty lines
     " let g:tagbar_autoshowtag = 1 " Auto open closed folds
