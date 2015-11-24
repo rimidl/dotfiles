@@ -129,17 +129,20 @@ set nocompatible
     autocmd BufWritePost * call USLayout()
 
   " == GUI
-    set guifont=Monaco:h11
-
     set number
-
-    set t_ut=          " Fixing Vim's Background Color Erase for 256-color tmux - http://sunaku.github.io/vim-256color-bce.html
-
+    set guifont=Monaco:h11
     set textwidth=120
     set nowrap         " do not wrap lines
 
     set showcmd " display incomplete commands
     set laststatus=2 " show the satus line all the time
+
+    set t_ut=          " Fixing Vim's Background Color Erase for 256-color tmux - http://sunaku.github.io/vim-256color-bce.html
+
+    syntax on              " Enable syntax higlighter
+    colorscheme jellybeans
+    highlight Pmenu ctermbg=238 gui=bold
+    match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'  " Highlight VCS conflict markers (thanks, @sjl)
 
 " = Plugin Settings
   " == Ack
@@ -337,14 +340,6 @@ set nocompatible
 
   "autocmd BufNewFile,BufReadPost *.md set filetype=markdown
   autocmd BufRead,BufNewFile *.jbuilder,Gemfile,Rakefile,config.ru,Vagrantfile,Guardfile,Capfile,Cheffile set filetype=ruby
-
-" Section: Colors, fonts, etc
-  colorscheme jellybeans
-
-  syntax on    " Enable syntax higlighter
-
-  " Highlight VCS conflict markers (thanks, @sjl)
-  match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
 " Section: = Functions
   function! CmdLine(str)
