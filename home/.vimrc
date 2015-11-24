@@ -35,7 +35,8 @@ set nocompatible
   Plugin 'AutoClose'
   Plugin 'bronson/vim-visual-star-search'
   Plugin 'terryma/vim-expand-region'
-  Plugin 'godlygeek/tabular'
+  Plugin 'godlygeek/tabular'  " Vim script for text filtering and alignment
+  Plugin 'ervandew/supertab'  " Perform all your vim insert mode completions with Tab
 
   Plugin 'jceb/vim-orgmode'
   Plugin 'utl.vim' " Univeral Text Linking - Execute URLs, footnotes, open emails, organize ideas
