@@ -173,7 +173,7 @@ set nocompatible
 
   " == supertab
     let g:SuperTabDefaultCompletionType = "context"
-    let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+    let g:SuperTabDefaultCompletionType = "<C-X><C-N>"
 
   " == tagbar
     " let g:tagbar_compact = 1     " Omit help and empty lines
