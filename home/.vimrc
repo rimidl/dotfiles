@@ -193,7 +193,7 @@ set nocompatible
     let NERDTreeQuitOnOpen = 1       " Close tree on file open
   "}}}
 
-  " CtrlP {{{
+  " == CtrlP
     "let g:ctrlp_match_window_bottom = 0 " Show at top of window
     "let g:ctrlp_dotfiles=1
     let g:ctrlp_use_caching = 0
@@ -201,7 +201,9 @@ set nocompatible
     " let g:ctrlp_prompt_mappings = {
     "       \ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
     "       \ }
-  "}}}
+
+    nmap <silent> <leader>b :CtrlPBuffer<CR>
+    nmap <silent> <leader>@ :CtrlPTag<CR>
 
   " rusmode {{{
     let g:rusmode_autotoggle_insertleave=0
@@ -278,10 +280,6 @@ set nocompatible
   " nerdtree
     nmap <silent> <leader>n :NERDTreeToggle<CR>
     nmap <silent> <leader>N :NERDTreeFind<CR>
-
-  " CtrlP
-  nmap <silent> <leader>ff :CtrlP<cr>
-  nmap <silent> <leader>fb :CtrlPBuffer<cr>
 
   " tagbar
     nnoremap <silent> <F8> :TagbarToggle<CR>
