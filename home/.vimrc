@@ -185,6 +185,9 @@ set nocompatible
 
     nnoremap <silent> <F8> :TagbarToggle<CR>
 
+  " == vim-vroom
+    let g:vroom_use_vimux = 1
+
 " = Custom Settings
   " == DiffOrig
     " Convenient command to see the difference between the current buffer and the
@@ -205,14 +208,10 @@ set nocompatible
     vnoremap <silent> gf :call VisualSelection('gv', '')<CR>
 
     " When you press <leader>r you can search and replace the selected text
-    vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
+    " vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
 
 
 " Section: Plugins options {{{1
-
-  " vim-vroom
-    let g:vroom_use_vimux = 1
-
   " vim-xkbswitch
     " let g:XkbSwitchEnabled = 1
     " let g:XkbSwitchIMappings = ['ru']
