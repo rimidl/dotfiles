@@ -167,6 +167,14 @@ set nocompatible
     au FileType org setlocal tabstop=2
     au FileType org setlocal shiftwidth=2
 
+  " == tagbar
+    " let g:tagbar_compact = 1     " Omit help and empty lines
+    " let g:tagbar_autoshowtag = 1 " Auto open closed folds
+    let g:tagbar_autofocus = 1   " Move focus to tagbar window on open
+    let g:tagbar_iconchars = ['▸', '▾']
+
+    nnoremap <silent> <F8> :TagbarToggle<CR>
+
 " = Custom Settings
   " == DiffOrig
     " Convenient command to see the difference between the current buffer and the
@@ -218,13 +226,6 @@ set nocompatible
   let g:airline_left_sep=''
   let g:airline_right_sep=''
   let g:airline_section_z=''
-
-
-  " tagbar {{{2
-    " let g:tagbar_compact = 1     " Omit help and empty lines
-    " let g:tagbar_autoshowtag = 1 " Auto open closed folds
-    let g:tagbar_autofocus = 1   " Move focus to tagbar window on open
-    let g:tagbar_iconchars = ['▸', '▾']
 
 " Section: Mappings non-leader
 
@@ -281,9 +282,6 @@ set nocompatible
   " nerdtree
     nmap <silent> <leader>n :NERDTreeToggle<CR>
     nmap <silent> <leader>N :NERDTreeFind<CR>
-
-  " tagbar
-    nnoremap <silent> <F8> :TagbarToggle<CR>
 
   " vimux
     map <Leader>vr :VimuxRunCommand("bundle exec rspec")<CR>
