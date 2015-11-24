@@ -170,7 +170,9 @@ set nocompatible
   " == tagbar
     " let g:tagbar_compact = 1     " Omit help and empty lines
     " let g:tagbar_autoshowtag = 1 " Auto open closed folds
-    let g:tagbar_autofocus = 1   " Move focus to tagbar window on open
+    let g:tagbar_zoomwidth = 0     " Use the width of the longest currently visible tag.
+    let g:tagbar_autofocus = 1     " Move focus to tagbar window on open
+    let g:tagbar_sort = 0
     let g:tagbar_iconchars = ['▸', '▾']
 
     nnoremap <silent> <F8> :TagbarToggle<CR>
