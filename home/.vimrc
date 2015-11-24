@@ -141,7 +141,7 @@ set nocompatible
     set showcmd " display incomplete commands
     set laststatus=2 " show the satus line all the time
 
-" = Custom Settings
+" = Plugin Settings
   " == Ack
     set shellpipe=&>      " prevent ack output to bleed into the terminal
 
@@ -149,12 +149,25 @@ set nocompatible
     let g:ackhighlight = 1
     let g:ack_use_dispatch = 1
 
+  " == CtrlP
+    "let g:ctrlp_match_window_bottom = 0 " Show at top of window
+    "let g:ctrlp_dotfiles=1
+    let g:ctrlp_use_caching = 0
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    " let g:ctrlp_prompt_mappings = {
+    "       \ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
+    "       \ }
+
+    nmap <silent> <leader>b :CtrlPBuffer<CR>
+    nmap <silent> <leader>@ :CtrlPTag<CR>
+
   " == Orgmode
     au FileType org setlocal textwidth=300
     au FileType org setlocal wrap
     au FileType org setlocal tabstop=2
     au FileType org setlocal shiftwidth=2
 
+" = Custom Settings
   " == DiffOrig
     " Convenient command to see the difference between the current buffer and the
     " file it was loaded from, thus the changes you made.
@@ -192,18 +205,6 @@ set nocompatible
     let NERDChristmasTree = 1        " Be colorful
     let NERDTreeQuitOnOpen = 1       " Close tree on file open
   "}}}
-
-  " == CtrlP
-    "let g:ctrlp_match_window_bottom = 0 " Show at top of window
-    "let g:ctrlp_dotfiles=1
-    let g:ctrlp_use_caching = 0
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-    " let g:ctrlp_prompt_mappings = {
-    "       \ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
-    "       \ }
-
-    nmap <silent> <leader>b :CtrlPBuffer<CR>
-    nmap <silent> <leader>@ :CtrlPTag<CR>
 
   " rusmode {{{
     let g:rusmode_autotoggle_insertleave=0
