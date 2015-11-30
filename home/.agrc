@@ -1,0 +1,3 @@
+--type-add=js=.coffee
+--type-add=html=.html.erb,.html.haml,.hamlc,.haml
+--type-add=css=.sass,.scss
