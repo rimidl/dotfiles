@@ -165,6 +165,13 @@ set nocompatible
     nmap <silent> <leader>b :CtrlPBuffer<CR>
     nmap <silent> <leader>@ :CtrlPTag<CR>
 
+  " == NERDTree
+    let NERDTreeMinimalUI = 1        " Disable bookmarks and help labels
+    let NERDChristmasTree = 1        " Be colorful
+    let NERDTreeQuitOnOpen = 1       " Close tree on file open
+    let NERDTreeShowHidden = 1
+    let NERDTreeWinSize = 50
+
   " == Orgmode
     au FileType org setlocal textwidth=300
     au FileType org setlocal wrap
@@ -216,12 +223,6 @@ set nocompatible
     " let g:XkbSwitchEnabled = 1
     " let g:XkbSwitchIMappings = ['ru']
     " let g:XkbSwitchILayout = 'us'
-
-  " NERDTree {{{
-    let NERDTreeMinimalUI = 1        " Disable bookmarks and help labels
-    let NERDChristmasTree = 1        " Be colorful
-    let NERDTreeQuitOnOpen = 1       " Close tree on file open
-  "}}}
 
   " rusmode {{{
     let g:rusmode_autotoggle_insertleave=0
