@@ -154,7 +154,7 @@ set nocompatible
     let g:ack_use_dispatch = 1
 
   " == CtrlP
-    "let g:ctrlp_match_window_bottom = 0 " Show at top of window
+   "let g:ctrlp_match_window_bottom = 0 " Show at top of window
     "let g:ctrlp_dotfiles=1
     let g:ctrlp_use_caching = 0
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -162,7 +162,8 @@ set nocompatible
     "       \ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
     "       \ }
 
-    nmap <silent> <leader>b :CtrlPBuffer<CR>
+    nmap <silent> <leader>ff :CtrlP<CR>
+    nmap <silent> <leader>bb :CtrlPBuffer<CR>
     nmap <silent> <leader>@ :CtrlPTag<CR>
 
   " == NERDTree
@@ -171,6 +172,9 @@ set nocompatible
     let NERDTreeQuitOnOpen = 1       " Close tree on file open
     let NERDTreeShowHidden = 1
     let NERDTreeWinSize = 50
+    
+    nmap <silent> <leader>pt :NERDTreeToggle<CR>
+    nmap <silent> <leader>ft :NERDTreeFind<CR>
 
   " == Orgmode
     au FileType org setlocal textwidth=300
@@ -243,7 +247,7 @@ set nocompatible
   map K <nop>
   map q: :q
   nnoremap Q <nop>
-  map Q :q<CR>
+  " map Q :q<CR>
 
   " Treat long lines as break lines (useful when moving around in them):
   map j gj
@@ -259,10 +263,14 @@ set nocompatible
     map <right> <nop>
 
   " Easy window navigation
-    map <C-h> <C-w>h
-    map <C-j> <C-w>j
-    map <C-k> <C-w>k
-    map <C-l> <C-w>l
+    " map <C-h> <C-w>h
+    " map <C-j> <C-w>j
+    " map <C-k> <C-w>k
+    " map <C-l> <C-w>l
+    map <leader>wj <C-w>j
+    map <leader>wk <C-w>k
+    map <leader>wl <C-w>l
+    map <leader>wh <C-w>h
 
   " Automatically jump to end of text you pasted:
     vnoremap <silent> y y`]
@@ -288,10 +296,6 @@ set nocompatible
   nnoremap Y y$
 
 " Section: Mappings Plugins
-
-  " nerdtree
-    nmap <silent> <leader>n :NERDTreeToggle<CR>
-    nmap <silent> <leader>N :NERDTreeFind<CR>
 
   " vimux
     map <Leader>vr :VimuxRunCommand("bundle exec rspec")<CR>
@@ -321,12 +325,12 @@ set nocompatible
 
   " nmap <silent> <leader>w :wa<CR>:redraw!<CR>
   " nmap <silent> <leader>ц :wa<CR>:redraw!<CR>
-  nmap <silent> <leader>w :wa<CR>
-  nmap <silent> <leader>ц :wa<CR>
-  nmap <silent> <leader>q :q<CR>
+  nmap <silent> <leader>fs :w<CR>
+  nmap <silent> <leader>fS :wa<CR>
+  nmap <silent> <leader>wc :q<CR>
 
-  nmap <silent> <leader>- :split<CR>
-  nmap <silent> <leader>\| :vsplit<CR>
+  nmap <silent> <leader>w- :split<CR>
+  nmap <silent> <leader>w/ :vsplit<CR>
 
   nmap <Leader><Leader> V
 
