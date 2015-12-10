@@ -162,8 +162,9 @@ set nocompatible
     "       \ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
     "       \ }
 
-    nmap <silent> <leader>ff :CtrlP<CR>
+    nmap <silent> <leader>ff :CtrlPCurFile<CR>
     nmap <silent> <leader>bb :CtrlPBuffer<CR>
+    nmap <silent> <leader>pf :CtrlP<CR>
     nmap <silent> <leader>@ :CtrlPTag<CR>
 
   " == NERDTree
@@ -286,8 +287,10 @@ set nocompatible
   noremap <silent> <F4> :let @+=expand("%:p")<CR>
 
   " H to start of line, L to end of line
-  noremap H ^
-  noremap L $
+  map <leader>jl $
+  map <leader>jh 0
+  " noremap H ^
+  " noremap L $
 
   " make star “*” command stay on current word
   " nnoremap * *``
