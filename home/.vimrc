@@ -326,7 +326,8 @@ set nocompatible
   " It clears the search buffer
   nmap <silent> <leader>/ :nohlsearch<CR>
 
-  " nmap <silent> <leader>w :wa<CR>:redraw!<CR>
+  nmap <silent> <leader>q :q<CR>
+  nmap <silent> <leader>w :wa<CR>
   " nmap <silent> <leader>ц :wa<CR>:redraw!<CR>
   nmap <silent> <leader>fs :w<CR>
   nmap <silent> <leader>fS :wa<CR>
