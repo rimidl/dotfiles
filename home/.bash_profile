@@ -7,3 +7,4 @@ ulimit -n 10240
 
 eval "$(rbenv init -)"
 
+alias handgun='/Users/rimidl/work/nptv/handgun/bin/run'

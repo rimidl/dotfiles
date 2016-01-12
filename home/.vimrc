@@ -302,7 +302,7 @@ set nocompatible
 
   " vimux
     map <Leader>vr :VimuxRunCommand("bundle exec rspec")<CR>
-    map <Leader>vc :VimuxRunCommand("bundle exec rubocop && bundle exec haml-lint app/views")<CR>
+    map <Leader>vc :VimuxRunCommand("bundle exec rubocop && bundle exec haml-lint app/views && bundle exec scss-lint app/assets/stylesheets")<CR>
     map <Leader>vl :VimuxRunLastCommand<CR>
 
   " vim-fugitive
