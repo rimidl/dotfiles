@@ -13,3 +13,4 @@ alias rspec="bundle exec rspec"
 alias rails="bundle exec rails"
 
 alias wn="mvim ~/Documents/Evrone/time-tracking.org"
+alias handgun="ping -c1 10.88.18.7 && HANDGUN_ADDRESS=10.40.130.65 ~/work/nptv/handgun/bin/run"
