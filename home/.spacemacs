@@ -23,24 +23,36 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
+     osx
      ;; auto-completion
      ;; better-defaults
      emacs-lisp
-     ;; git
+     git
      ;; markdown
-     ;; org
+     org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
      ;; syntax-checking
      ;; version-control
+     ;; osx
+     ruby
+     yaml
+     ruby-on-rails
+     javascript
+     html
+     erlang
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages
+   '(
+     jbeans-theme
+     ;; haml-mode
+     )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -238,6 +250,17 @@ values."
 It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
+  ;; git
+  (setq-default git-magit-status-fullscreen t)
+  (setq magit-push-always-verify nil)
+  (global-git-commit-mode t)
+  ;; layer ruby
+  (setq-default ruby-version-manager 'rbenv)
+  ;; layer javascript
+  (setq-default js2-basic-offset 2)
+  (setq-default js-indent-level 2)
+  ;; layer html
+  (add-to-list 'auto-mode-alist '("\\.jsx\\'" . fundamental))
   )
 
 (defun dotspacemacs/user-config ()
