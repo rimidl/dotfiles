@@ -256,9 +256,6 @@ in `dotspacemacs/user-config'."
   (global-git-commit-mode t)
   ;; layer ruby
   (setq-default ruby-version-manager 'rbenv)
-  ;; layer javascript
-  (setq-default js2-basic-offset 2)
-  (setq-default js-indent-level 2)
   ;; layer html
   (add-to-list 'auto-mode-alist '("\\.jsx\\'" . fundamental))
   )
@@ -267,6 +264,9 @@ in `dotspacemacs/user-config'."
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
+  ;; layer javascript
+  (setq-default js2-basic-offset 2)
+  (setq-default js-indent-level 2)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
