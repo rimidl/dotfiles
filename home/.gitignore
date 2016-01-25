@@ -1,7 +1,5 @@
 *.swp
 *.*~
 .idea/
+.tern-port
 .DS_Store
-.agignore
-_/
-config/projections.json
