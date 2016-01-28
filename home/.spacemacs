@@ -265,6 +265,7 @@ in `dotspacemacs/user-config'."
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
   ;; layer html
+  (setq-default web-mode-markup-indent-offset 2)
   (setq-default css-indent-offset 2)
   ;; layer javascript
   (setq-default js2-basic-offset 2)
