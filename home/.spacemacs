@@ -33,7 +33,10 @@ values."
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     ;; spell-checking
+
+     ;; brew reinstall aspell --with-lang-ru --with-lang-en
+     spell-checking
+
      ;; syntax-checking
      ;; version-control
      ;; osx
