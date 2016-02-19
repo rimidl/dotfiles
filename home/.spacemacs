@@ -34,6 +34,10 @@ values."
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
 
+     (auto-completion :variables
+                      auto-completion-private-snippets-directory '("~/.spacemacs.d/snippets")
+                      auto-completion-enable-snippets-in-popup t)
+
      ;; brew reinstall aspell --with-lang-ru --with-lang-en
      spell-checking
 
@@ -53,7 +57,7 @@ values."
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages
    '(
-     jbeans-theme
+     ;; jbeans-theme
      ;; haml-mode
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
@@ -254,7 +258,7 @@ It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
 
-  ;; git
+  ;; layer git
   (setq-default git-magit-status-fullscreen t)
   (setq magit-push-always-verify nil)
   (global-git-commit-mode t)
@@ -264,7 +268,6 @@ in `dotspacemacs/user-config'."
 
   ;; layer html
   (add-to-list 'auto-mode-alist '("\\.jsx\\'" . fundamental))
-
   )
 
 (defun dotspacemacs/user-config ()
@@ -279,7 +282,6 @@ layers configuration. You are free to put any user code."
   ;; layer javascript
   (setq-default js2-basic-offset 2)
   (setq-default js-indent-level 2)
-
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

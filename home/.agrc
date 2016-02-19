@@ -1,3 +1,4 @@
---type-add=js=.coffee
+--type-add=js=.coffee,.jsx
 --type-add=html=.html.erb,.html.haml,.hamlc,.haml
 --type-add=css=.sass,.scss
+--ignore-dir=node_modules/
